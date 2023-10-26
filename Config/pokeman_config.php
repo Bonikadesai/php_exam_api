@@ -13,7 +13,7 @@
 
         public function image_insert($name,$path){
             $this->connect();
-            $query = "INSERT INTO images(name,path) VALUES ('$name','$path');";
+            $query = "INSERT INTO images(name,path) VALUES ('$name','$path');";//http://127.0.0.1/exam_php/Api/image_insert_api.php
 
             $res = mysqli_query($this->con_res,$query);
             return $res;

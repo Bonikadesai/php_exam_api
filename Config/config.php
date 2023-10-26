@@ -13,8 +13,7 @@
 
         public function insert($name){
             $this->connect();
-            $query="INSERT INTO verity (name) VALUES ('$name');";
-
+            $query="INSERT INTO verity (name) VALUES ('$name');";//http://127.0.0.1/exam_php/Api/insert_api.php
             $res = mysqli_query($this->con_res,$query);
             return $res;
         }
@@ -23,17 +22,11 @@
             $this->connect();
             $query = "UPDATE verity SET name = '$name' WHERE id = $id;";
 
-            $res = mysqli_query($this->con_res,$query);//return boolean
+            $res = mysqli_query($this->con_res,$query);//http://127.0.0.1/exam_php/Api/update_api.php
             return $res;
         }
 
-        public function insert_image($name,$path){
-            $this->connect();
-            $query = "INSERT INTO images(name,path) VALUES ('$name','$path');";
-
-            $res = mysqli_query($this->con_res,$query);
-            return $res;
-        }
+       
         
     }
 ?>
